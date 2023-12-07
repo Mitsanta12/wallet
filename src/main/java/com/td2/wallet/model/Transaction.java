@@ -4,6 +4,7 @@ package com.td2.wallet.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Table(name = "transaction")
@@ -22,7 +23,7 @@ public class Transaction {
     @JoinColumn(name = "account_id")
     private Account account_id;
     private String transactionName;
-    private Integer amount;
+    private BigDecimal amount;
     private Date transactionDate;
 }
 
